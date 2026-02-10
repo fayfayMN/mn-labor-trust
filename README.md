@@ -1,32 +1,56 @@
-<<<<<<< HEAD
-# MN Labor Trust Infrastructure
+MN Labor Trust Infrastructure
 Privacy-preserving labor compliance system for Minnesota
-=======
-# mn-labor-trust
-Minnesota Labor Compliance Trust Infrastructure
-The Twin Cities "Safe-Compliance" Initiative
- Mission
-Help Minnesota small businesses comply with 2026 labor laws while protecting immigrant workers from federal surveillance through cryptographic anonymity.
-A privacy-first technical layer using Zero-Knowledge Proofs (ZKPs) to bridge the gap between 2026 MN labor mandates and worker protection.
 
-2. The "Why" (Problem Statement)
+🛡️ Minnesota Labor Trust Infrastructure
+Privacy-preserving labor compliance system helping MN businesses meet 2026 requirements while protecting workers.
 
-Dual Crisis: Twin Cities small businesses must meet strict 2026 tracking mandates for 15-minute breaks and 30-minute meals or face $10,000 fines.
+🚨 URGENT: 2026 MFLSA Compliance Now in Effect
+February 2026 Update: New MN Fair Labor Standards Act amendments require immediate implementation of break tracking systems with severe penalties.
 
-The Fear: Immigrant workers fear that traditional employment records will be seized during federal enforcement (ICE raids), which have increased 250% in the region.
+🎯 The Twin Cities Safe-Compliance Initiative (Phase 1)
+The Problem
+Twin Cities small businesses face a dual crisis:
 
-Impact: This has led to a 23% labor shortage and a weekly economic loss of $10M–$20M in local cultural districts.
+State Labor Mandates: 2026 MFLSA requires precise 15-minute break and 30-minute meal tracking with penalties up to $10,000 per violation
+Worker Safety: Immigrant workers fear employment records could be used in federal immigration enforcement
+Solution: The Minimum Viable Shield (MVS)
+A privacy-preserving technical layer using Decentralized Identity (DID) and Zero-Knowledge Proofs (ZKPs):
 
-3. The "How" (Solution & Innovation)
-We provide a decentralized identity (DID) system where:
+Pass Level	Status	Purpose
+🟢 Green Pass	Fully Verified	Complete audit-compliance for state labor laws
+🟡 Yellow Pass	Good Faith	Workers with pending legal applications
+🔴 Red Pass	Needs Attention	Requires document re-verification at local Trust Hub
 
-Workers prove work authorization via QR codes without revealing their personal identity.
+Tech Stack
+Frontend: React Native with Expo (QR generation/scanning)
+Security: Device Secure Enclave (iOS) / Android Keystore
+Identity: Decentralized Identifiers (did:key method)
+Verification: Zero-Knowledge Proofs via snarkjs
+Backend: Supabase (PostgreSQL with Row-Level Security)
+Phased Roadmap
+Phase 1 (Weeks 1-12): Urban Pilot
+Target: Lake Street & University Avenue corridors
+Goal: 5 businesses, 3 Trust Hubs, 50 workers 
+Focus: 2026 MFLSA compliance + PROMISE Act integration
+Phase 2 (Year 2): "Ag-Shield" Expansion
+Target: Greater Minnesota farms and agricultural businesses
+Adaptation: Offline-capable features for rural areas
+Integration: MN Department of Agriculture programs
+⚡ Quick Start for Pilot Participants
+# For developers
+git clone https://github.com/YOUR-USERNAME/mn-labor-trust.git
+cd mn-labor-trust
+npm install && npm run dev
 
-Businesses maintain audit-ready logs for the MN Department of Labor without storing any sensitive personal data.
+# For businesses
+1. Download "MN Compliance Verifier" from App Store/Play Store
+2. Contact local Trust Hub for credential issuance
+3. Scan worker QR codes for shift logging
 
-Privacy-First Architecture: Features include ephemeral data that auto-deletes identity mappings after 24 hours and local-first storage on worker devices.
+
+Technical Architecture   
 ┌─────────────────────────────────────────────────────┐
-│                 MN Labor Trust Stack                 │
+│                MN Labor Trust Stack                 │
 ├─────────────────────────────────────────────────────┤
 │  Worker Wallet (React Native) ←→ Business Verifier  │
 │          ↓                          ↓               │
@@ -35,41 +59,4 @@ Privacy-First Architecture: Features include ephemeral data that auto-deletes id
 │  Trusted Issuers            MN DoL Audit Reports    │
 └─────────────────────────────────────────────────────┘
 
-📋 2026 MN Compliance Features
-✅ Automatic break tracking (15-min breaks every 4 hours)
 
-✅ Meal period compliance (30-min meals for 6+ hour shifts)
-
-✅ Paid leave calculation (0.88% payroll tax compliance)
-
-✅ Audit-ready reports (MN DoL formatted exports)
-
-✅ PROMISE Act integration (Grant application automation)
-
-🔐 Privacy by Design
-No personal data storage (only anonymous identifiers)
-
-24-hour auto-deletion of identity linkages
-
-Zero-knowledge proofs for work authorization
-
-Community-based issuance (trusted organizations, not government)
-
-4. Technical Stack for GitHub
-
-Frontend: React Native with Expo (using libraries like snarkjs for ZKPs and expo-camera for QR scanning).
-
-Backend: Supabase (PostgreSQL) for encrypted metadata.
-
-Cryptography: did:key methods and Ed25519 signatures for mobile performance.
-
-Hardware: NTAG215 NFC tags and Bluetooth beacons for presence verification.
-
-5. Project Goals (Success Metrics)
-
-Stabilize Economy: Secure businesses by providing compliant payroll proof.
-
-Protect Workforce: Support 50+ workers in a pilot phase with 0 personal data points exposed to business owners.
-
-Reduce Fear: Aim for a 60% reduction in worker fear sentiment through cryptographic anonymity
->>>>>>> be8dd0d13fb651791b258c369cc58bb7d88beeac
